@@ -1,0 +1,827 @@
+/* ===== 🔄 RESET BÁSICO - Aplica estilos consistentes em todos os navegadores ===== */
+* {
+  /* Remove margem padrão */
+  margin: 0;
+  /* Remove preenchimento padrão */
+  padding: 0;
+  /* Define o modelo de caixa para incluir padding e borda no tamanho total do elemento */
+  box-sizing: border-box;
+}
+
+body {
+  /* Define a cor de fundo principal da página (Azul Escuro) */
+  background-color: #086788;
+  /* Define a família de fontes padrão */
+  font-family: Arial, sans-serif;
+}
+
+/* ===== 💻 ESTILOS GERAIS DE TEXTO E ELEMENTOS ===== */
+h2 {
+  /* Define a cor dos títulos de nível 2 (Amarelo) */
+  color: #f4b732;
+  /* Garante que o texto não esteja em itálico */
+  font-style: normal;
+}
+
+p {
+  /* Define a cor dos parágrafos (Amarelo) */
+  color: #f4b732;
+}
+
+/* ===== 🔘 ESTILOS GERAIS DE BOTÕES (Unificados) ===== */
+
+/* Estilos Comuns para Botões de Ação (.btn-carrinho, .btn-comprar, button[type="submit"]) */
+.btn-carrinho,
+.btn-comprar,
+button[type="submit"] {
+  /* Remove borda padrão */
+  border: none;
+  /* Define preenchimento interno */
+  padding: 10px 15px;
+  /* Define o tamanho da fonte */
+  font-size: 16px;
+  /* Muda o cursor para indicar que é clicável */
+  cursor: pointer;
+  /* Arredonda os cantos */
+  border-radius: 6px;
+  /* Torna o texto em negrito */
+  font-weight: bold;
+  /* Adiciona transição suave para as propriedades 'transform' e 'background-color' */
+  transition: transform 0.25s ease, background-color 0.3s ease;
+}
+
+/* Botão de COMPRAR (Amarelo) e SUBMIT (Geral) */
+.btn-comprar,
+button[type="submit"] {
+  /* Cor de fundo (Amarelo Laranja) */
+  background-color: #ffb400;
+  /* Cor do texto (Preto) */
+  color: #000;
+}
+
+.btn-comprar:hover,
+button[type="submit"]:hover {
+  /* Cor de fundo no hover (Amarelo mais escuro) */
+  background-color: #e1a000;
+  /* Aumenta ligeiramente o botão no hover */
+  transform: scale(1.05);
+}
+
+/* Botão de ADICIONAR AO CARRINHO (Amarelo) */
+.btn-carrinho {
+  /* Cor de fundo (Amarelo Laranja) */
+  background-color: #ffb400;
+  /* Cor do texto (Preto) */
+  color: #000;
+}
+
+.btn-carrinho:hover {
+  /* Cor de fundo no hover (Amarelo mais escuro) */
+  background-color: #e1a000;
+  /* Aumenta ligeiramente o botão no hover */
+  transform: scale(1.05);
+}
+
+/* Botões específicos dentro dos Cards */
+.card button {
+  /* Cor de fundo (Vermelho) */
+  background-color: #d44845;
+  /* Cor do texto (Branco) */
+  color: white;
+  /* Adiciona transição suave para as propriedades 'transform' e 'filter' */
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.card button:hover {
+  /* Mantém a cor de fundo no hover */
+  background-color: #d44845;
+  /* Aumenta o botão um pouco mais (específico para cards) */
+  transform: scale(1.07);
+  /* Adiciona um pequeno brilho no hover */
+  filter: brightness(1.1);
+}
+
+/* Estilo para o preço (Elemento SPAN estilizado como botão desativado) */
+.preco {
+  /* Cor de fundo transparente */
+  background-color: transparent;
+  /* Remove a borda */
+  border: none;
+  /* Remove o preenchimento */
+  padding: 0;
+  /* Tamanho da fonte */
+  font-size: 18px;
+  /* Texto em negrito */
+  font-weight: bold;
+  /* Cor do texto (Azul Escuro) */
+  color: #086788;
+  /* Define o cursor como padrão */
+  cursor: default;
+}
+
+/* ===== 📝 ESTILOS GERAIS DE FORMULÁRIO E INPUTS ===== */
+form {
+  /* Define o layout como flexbox */
+  display: flex;
+  /* Organiza os itens em coluna */
+  flex-direction: column;
+  /* Espaço entre os elementos do formulário */
+  gap: 15px;
+  /* Largura máxima do formulário */
+  max-width: 400px;
+  /* Centraliza o formulário na página */
+  margin: 0 auto;
+}
+
+label {
+  /* Texto em negrito */
+  font-weight: bold;
+  /* Cor do texto (Branco Suave) */
+  color: #fff1d0;
+}
+
+/* Estilos base para todos os inputs e textareas */
+input,
+textarea {
+  /* Define preenchimento interno */
+  padding: 10px;
+  /* Define borda com cor cinza claro */
+  border: 2px solid #ddd;
+  /* Arredonda os cantos */
+  border-radius: 5px;
+  /* Define o tamanho da fonte */
+  font-size: 16px;
+  /* Adiciona transição suave para as propriedades 'border-color' e 'box-shadow' */
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+input:focus,
+textarea:focus {
+  /* Altera a cor da borda ao focar (Amarelo) */
+  border-color: #f4b732;
+  /* Remove o outline padrão do navegador */
+  outline: none;
+  /* Adiciona uma sombra suave ao focar */
+  box-shadow: 0 0 5px rgba(244, 183, 50, 0.5);
+}
+
+/* ===== ⚓ NAV - Estilos da Barra de Navegação Principal ===== */
+nav {
+  /* Cor de fundo (Azul Médio) */
+  background-color: #267899;
+  /* Preenchimento interno */
+  padding: 10px 20px;
+  /* Define o layout como flexbox */
+  display: flex;
+  /* Alinha itens verticalmente ao centro */
+  align-items: center;
+  /* Distribui o espaço entre os elementos */
+  justify-content: space-between;
+  /* Espaçamento entre os itens */
+  gap: 20px;
+  /* Permite que os itens quebrem para a próxima linha */
+  flex-wrap: wrap;
+}
+
+.logo {
+  /* Largura da imagem do logo */
+  width: 90px;
+  /* Arredonda a imagem (forma de círculo/cápsula) */
+  border-radius: 2rem;
+  /* Transição suave para a propriedade 'transform' */
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  /* Aumenta ligeiramente o logo no hover */
+  transform: scale(1.05);
+}
+
+/* ===== ☰ MENU - Estilos da Lista de Navegação ===== */
+.nav-menu {
+  /* Remove os marcadores de lista */
+  list-style: none;
+  /* Define o layout como flexbox */
+  display: flex;
+  /* Espaçamento entre os itens do menu */
+  gap: 20px;
+  /* Alinha itens verticalmente ao centro */
+  align-items: center;
+}
+
+.nav-menu li {
+  /* Necessário para posicionar o submenu em relação ao item de menu */
+  position: relative;
+}
+
+.nav-menu a {
+  /* Cor do texto do link (Branco Suave) */
+  color: #fff1d0;
+  /* Remove o sublinhado */
+  text-decoration: none;
+  /* Define preenchimento interno */
+  padding: 8px 5px;
+  /* Transforma o link em um bloco para preencher a área de clique */
+  display: block;
+  /* Transição suave para a propriedade 'color' */
+  transition: color 0.25s ease;
+}
+
+.nav-menu a:hover {
+  /* Altera a cor do link no hover (Amarelo) */
+  color: #f4b732;
+}
+
+/* ===== SUBMENU COM ANIMAÇÃO SUAVE ===== */
+.nav-menu li ul {
+  /* Oculta o submenu por padrão */
+  opacity: 0;
+  /* Torna o submenu invisível */
+  visibility: hidden;
+  /* Posiciona o submenu absolutamente */
+  position: absolute;
+  /* Cor de fundo do submenu (Azul um pouco mais escuro) */
+  background-color: #266b86;
+  /* Define preenchimento interno */
+  padding: 10px;
+  /* Posiciona o submenu abaixo do item de menu */
+  top: 35px;
+  /* Alinha o submenu à esquerda */
+  left: 0;
+  /* Arredonda os cantos */
+  border-radius: 5px;
+  /* Desloca o submenu para baixo (preparando para a animação de entrada) */
+  transform: translateY(10px);
+  /* Transição suave para as propriedades 'opacity' e 'transform' */
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  /* Remove os marcadores de lista */
+  list-style: none;
+}
+
+.nav-menu li:hover ul {
+  /* Torna o submenu totalmente visível no hover */
+  opacity: 1;
+  /* Torna o submenu visível */
+  visibility: visible;
+  /* Move o submenu para sua posição final */
+  transform: translateY(0);
+}
+
+/* ===== 🔎 BUSCA - Estilos da Barra de Pesquisa ===== */
+.search-container {
+  /* Define o layout como flexbox */
+  display: flex;
+  /* Alinha itens verticalmente ao centro */
+  align-items: center;
+  /* Largura mínima para o container de busca */
+  min-width: 260px;
+  /* Largura flexível (35% da nav) */
+  width: 35%;
+  /* Largura máxima */
+  max-width: 480px;
+  /* Fundo branco */
+  background: #fff;
+  /* Arredonda bastante as bordas (formato de cápsula) */
+  border-radius: 40px;
+  /* Borda fina e clara */
+  border: 2px solid #ddd;
+  /* Preenchimento interno */
+  padding: 5px 10px;
+  /* Transição suave para 'box-shadow' e 'transform' */
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.search-container:focus-within {
+  /* Adiciona uma sombra amarela brilhante quando o input está focado */
+  box-shadow: 0 0 10px rgba(255, 200, 0, 0.7);
+  /* Aumenta ligeiramente o container ao focar */
+  transform: scale(1.02);
+}
+
+.search-input {
+  /* Ocupa todo o espaço restante no container */
+  flex: 1;
+  /* Remove a borda padrão */
+  border: none;
+  /* Remove o outline de foco */
+  outline: none;
+  /* Tamanho da fonte */
+  font-size: 16px;
+}
+
+.search-btn {
+  /* Remove a borda */
+  border: none;
+  /* Cor de fundo (Amarelo) */
+  background: #f4b732;
+  /* Preenchimento interno */
+  padding: 8px 15px;
+  /* Arredonda as bordas */
+  border-radius: 30px;
+  /* Muda o cursor */
+  cursor: pointer;
+  /* Transição suave para 'transform' e 'filter' */
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.search-btn:hover {
+  /* Aumenta ligeiramente o botão no hover */
+  transform: scale(1.05);
+  /* Adiciona um pequeno brilho no hover */
+  filter: brightness(1.1);
+}
+
+.search-btn img {
+  /* Define a largura do ícone de busca */
+  width: 20px;
+}
+
+/* ===== 🛒 CARRINHO - Estilos do Ícone do Carrinho ===== */
+.cart {
+  /* Necessário para posicionar o contador de itens */
+  position: relative;
+  /* Muda o cursor */
+  cursor: pointer;
+  /* Transição suave para 'transform' */
+  transition: transform 0.25s ease;
+}
+
+.cart:hover {
+  /* Aumenta ligeiramente o ícone no hover */
+  transform: scale(1.1);
+}
+
+.cart-icon {
+  /* Define a largura do ícone */
+  width: 32px;
+}
+
+.cart-count {
+  /* Posiciona o contador absolutamente no topo e à direita do carrinho */
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  /* Fundo vermelho */
+  background: red;
+  /* Texto branco */
+  color: #fff;
+  /* Tamanho da fonte pequeno */
+  font-size: 12px;
+  /* Preenchimento */
+  padding: 2px 6px;
+  /* Arredonda as bordas (círculo/cápsula) */
+  border-radius: 10px;
+  /* Texto em negrito */
+  font-weight: bold;
+}
+
+/* ===== 🛍️ PRODUTOS E CARDS - Estilos da Seção de Produtos ===== */
+.products {
+  /* Define o layout como flexbox */
+  display: flex;
+  /* Permite que os cards quebrem para a próxima linha */
+  flex-wrap: wrap;
+  /* Centraliza os cards horizontalmente */
+  justify-content: center;
+  /* Espaçamento entre os cards */
+  gap: 20px;
+  /* Preenchimento em torno da seção */
+  padding: 20px;
+}
+
+/* ===== CARDS COM ANIMAÇÃO ===== */
+.card {
+  /* Cor de fundo do card (Branco Suave) */
+  background-color: #fff1d0;
+  /* Arredonda os cantos */
+  border-radius: 10px;
+  /* Preenchimento interno */
+  padding: 15px;
+  /* Define a largura para 2 cards por linha em telas maiores que 700px (com espaço de 20px) */
+  width: calc(50% - 20px);
+  /* Centraliza o texto */
+  text-align: center;
+  /* Transição suave para 'transform' e 'box-shadow' */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  /* Move o card ligeiramente para cima no hover */
+  transform: translateY(-6px);
+  /* Adiciona uma sombra maior no hover */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.20);
+}
+
+.card img {
+  /* Define a largura da imagem do produto dentro do card */
+  width: 45%;
+  /* Desativa a transição para a imagem (para evitar conflito com o hover do card) */
+  transition: none;
+}
+
+.card:hover img {
+  /* Garante que a imagem não sofra alteração no hover do card */
+  transform: none;
+}
+
+/* ===== SECTION ESTILIZADA (CONTATO) - Estilos Específicos para a Seção de Contato ===== */
+.contact-section {
+  /* Cor de fundo (Branco Suave) */
+  background: #fff1d0;
+  /* Preenchimento interno */
+  padding: 40px 25px;
+  /* Margem superior/inferior e centralização horizontal */
+  margin: 40px auto;
+  /* Largura em relação ao contêiner pai */
+  width: 90%;
+  /* Largura máxima */
+  max-width: 700px;
+  /* Arredonda os cantos */
+  border-radius: 20px;
+  /* Adiciona sombra */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  /* Centraliza o texto */
+  text-align: center;
+  /* Aplica a animação de entrada (fadeIn) */
+  animation: fadeIn 0.6s ease;
+}
+
+.contact-section h2 {
+  /* Tamanho da fonte maior */
+  font-size: 28px;
+  /* Cor do título (Azul Escuro) */
+  color: #086788;
+  /* Margem inferior */
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  /* Cor do texto (Azul Médio) */
+  color: #267899;
+  /* Tamanho da fonte */
+  font-size: 18px;
+  /* Margem inferior */
+  margin-bottom: 25px;
+}
+
+/* Sobrescreve a cor das labels dentro da seção de contato */
+.contact-section label {
+  /* Cor do texto (Azul Escuro) para melhor contraste */
+  color: #086788;
+}
+
+/* Sobrescreve a aparência dos inputs/textareas dentro da seção de contato */
+.contact-section input,
+.contact-section textarea {
+  /* Fundo branco puro */
+  background: #fff;
+  /* Borda mais suave */
+  border: 2px solid #ccc;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+  /* Altera a cor da borda ao focar (Azul Escuro) */
+  border-color: #086788;
+  /* Adiciona sombra ao focar (Azul Escuro) */
+  box-shadow: 0 0 8px rgba(8, 103, 136, 0.4);
+}
+
+/* Sobrescreve o botão de enviar dentro da seção de contato */
+.contact-section button[type="submit"] {
+  /* Cor de fundo (Azul Médio) */
+  background-color: #267899;
+  /* Cor do texto (Branco Suave) */
+  color: #fff1d0;
+}
+
+.contact-section button[type="submit"]:hover {
+  /* Altera a cor de fundo no hover (Amarelo) */
+  background-color: #f4b732;
+  /* Aumenta ligeiramente o botão no hover */
+  transform: scale(1.05);
+}
+
+/* Definição da Animação 'fadeIn' */
+@keyframes fadeIn {
+
+  /* Estado inicial da animação: totalmente transparente e movido 20px para baixo */
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  /* Estado final da animação: totalmente opaco e na posição original */
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== 🌟 HERO SECTION - Estilos da Seção Principal (Vitrine) ===== */
+.hero {
+  /* Altura que ocupa a maior parte da tela (viewport height) */
+  height: 90vh;
+  /* Define o layout como flexbox */
+  display: flex;
+  /* Centraliza o conteúdo horizontalmente */
+  justify-content: center;
+  /* Centraliza o conteúdo verticalmente */
+  align-items: center;
+  /* Centraliza o texto */
+  text-align: center;
+  /* IMAGEM DE FUNDO: SUBSTITUA PELO SEU CAMINHO! */
+  background-image: url('assets/background-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  /* Adiciona um efeito de sombra/overlay escuro para o texto brilhar (40% de opacidade) */
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+}
+
+/* Container do Conteúdo do Hero (para controle de largura) */
+.hero-content {
+  /* Largura máxima do texto */
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* Título Principal (Headline) */
+.hero h1 {
+  /* Cor do título (Amarelo, coerente com o h2 existente) */
+  color: #f4b732;
+  /* Tamanho da fonte grande e impactante */
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  /* Garante um bom contraste */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Subtítulo */
+.hero p {
+  /* Cor do texto (Branco Suave, para contraste com o fundo escuro) */
+  color: #fff1d0;
+  /* Tamanho da fonte */
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  /* Garante um bom contraste */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Botão Call to Action (CTA) */
+.btn-cta {
+  /* Reutiliza a paleta de cores dos botões existentes */
+  background-color: #ffb400;
+  /* Amarelo Laranja */
+  color: #000;
+  /* Preto */
+  font-weight: bold;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.25s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: #e1a000;
+  /* Amarelo mais escuro */
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 180, 0, 0.5);
+}
+
+/* ===== 🌟 HERO SECTION - Estilos da Seção Principal (Vitrine) ===== */
+.hero {
+    /* Altura que ocupa a maior parte da tela (viewport height) */
+    height: 90vh; 
+    /* Define o layout como flexbox */
+    display: flex;
+    /* Centraliza o conteúdo horizontalmente */
+    justify-content: center;
+    /* Centraliza o conteúdo verticalmente */
+    align-items: center;
+    /* Centraliza o texto */
+    text-align: center;
+    
+    /* 💥 ESTE É O CAMINHO CORRETO */
+    /* Volta uma pasta (..) e entra na pasta assets/ */
+    background-image: url('../assets/hero-background.jpg'); 
+    
+    background-size: cover; /* Garante que a imagem cubra o espaço */
+    background-position: center; /* Centraliza a imagem */
+    position: relative;
+    
+    /* Adiciona um efeito de sombra/overlay escuro para o texto brilhar (40% de opacidade) */
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4); 
+}
+
+/* Container do Conteúdo do Hero (para controle de largura) */
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Título Principal (Headline) */
+.hero h1 {
+    color: #f4b732; 
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Subtítulo */
+.hero p {
+    color: #fff1d0; 
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Botão Call to Action (CTA) */
+.btn-cta {
+    background-color: #ffb400;
+    color: #000;
+    font-weight: bold;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.25s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: #e1a000;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 180, 0, 0.5);
+}
+
+/* ===== 📝 ABOUT SECTION - Estilos da Página Sobre ===== */
+.about-section {
+    /* Define a largura máxima do conteúdo central */
+    max-width: 1200px; 
+    margin: 40px auto; /* Centraliza horizontalmente e adiciona margem superior/inferior */
+    padding: 20px;
+    background-color: #086788; /* Fundo Azul Escuro (cor principal do body, mas aqui garante padding) */
+    color: #fff1d0; /* Cor do texto padrão para contraste */
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about-section h2 {
+    color: #ffb400; /* Laranja/Amarelo */
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #f4b732; /* Linha amarela para destaque */
+    width: 100%;
+    max-width: 600px;
+}
+
+.about-section p {
+    /* Sobrepõe a regra geral 'p' para usar o branco/creme no texto longo */
+    color: #fff1d0; 
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    max-width: 900px;
+    text-align: justify; /* Alinha o texto para melhor leitura em blocos longos */
+}
+
+.about-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px; /* Cantos arredondados */
+    margin: 20px 0 30px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Sombra suave */
+    /* Garante que a imagem tenha o caminho correto, como fizemos na Hero Section */
+    display: block; 
+}
+
+.mission-statement {
+    color: #f4b732; /* Amarelo de destaque para a missão */
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 30px 0;
+    padding: 20px;
+    border: 2px solid #ffb400;
+    border-radius: 5px;
+}
+
+/* Reutilizando o estilo do botão CTA da Hero Section */
+.about-section .btn-cta {
+    margin-top: 20px;
+}
+
+/* Responsividade para o Hero Section (Celulares) */
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .btn-cta {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}
+
+/* ===== 🦶 FOOTER - Estilos do Rodapé ===== */
+footer {
+  /* Cor de fundo (Azul Médio) */
+  background-color: #267899;
+  /* Preenchimento interno */
+  padding: 20px;
+  /* Centraliza o texto */
+  text-align: center;
+  /* Cor do texto (Branco) */
+  color: #fff;
+  /* Margem superior para separar do conteúdo acima */
+  margin-top: 20px;
+}
+
+/* ===== 📱 RESPONSIVIDADE (MEDIA QUERIES) ===== */
+
+/* Estilos para telas com largura máxima de 700px (Geralmente tablets em modo retrato ou paisagem) */
+@media (max-width: 700px) {
+  .card {
+    /* Ocupa a largura total da tela */
+    width: 100%;
+  }
+
+  .card img {
+    /* Aumenta a imagem para 60% da largura do card */
+    width: 60%;
+  }
+}
+
+/* Estilos para telas com largura máxima de 650px (Geralmente celulares grandes ou tablets pequenos) */
+@media (max-width: 650px) {
+  .logo {
+    /* Reduz a largura do logo */
+    width: 65px;
+  }
+
+  nav {
+    /* Mantém a direção da navegação como linha (para que logo e carrinho fiquem lado a lado) */
+    flex-direction: row;
+  }
+
+  .search-container {
+    /* Ocupa quase a largura total da nav */
+    width: 95%;
+    /* Reordena para aparecer por último (abaixo do menu) */
+    order: 3;
+  }
+
+  .nav-menu {
+    /* Define a ordem para aparecer no meio */
+    order: 2;
+    /* Ocupa a largura total */
+    width: 100%;
+    /* Centraliza os itens do menu */
+    justify-content: center;
+  }
+
+  .cart {
+    /* Define a ordem para aparecer primeiro (antes do menu e busca) */
+    order: 1;
+  }
+}
+
+/* Estilos para telas com largura máxima de 500px (Geralmente celulares) */
+@media (max-width: 500px) {
+  nav {
+    /* Altera a direção da navegação para coluna (elementos um abaixo do outro) */
+    flex-direction: column;
+  }
+
+  .search-container {
+    /* Ocupa quase a largura total da nav */
+    width: 95%;
+    /* Mantém a ordem para aparecer por último */
+    order: 3;
+  }
+}
+
+/* Estilos para telas com largura mínima de 900px (Telas maiores) */
+@media (min-width: 900px) {
+  .search-container {
+    /* Fixa a largura do container de busca em telas grandes */
+    width: 400px;
+  }
+}
